@@ -2,7 +2,8 @@
 This is respository includes pytorch implementation of cell segmentation algorithms Unet, DoubleUnet, Swin-Unet and Cell pose with preprocesing steps for wholeslide ndpi images
 ## Installation 
 ### Install dependencies
-####Directory Structure
+Directory Structure
+~~~
 |-- data
 |-- eval
 |   |-- evaldoubleunet.py
@@ -39,4 +40,4 @@ This is respository includes pytorch implementation of cell segmentation algorit
 |   |-- swinunet_224x224_V1.0.wth
 |   |-- unet_256x256_V1.0_pannuke.wth
 |   `-- unet_256x256_V2.0_pannuke_full.wth
-
+~~~
