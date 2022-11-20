@@ -1,8 +1,11 @@
 # Cell-Segmentation
 This is respository includes pytorch implementation of cell segmentation algorithms Unet, DoubleUnet, Swin-Unet and Cell pose with preprocesing steps for wholeslide ndpi images
 ## Installation 
+Download the zipfile and unzip in your python environment, code can be either run from command line using python main.py  or with shell script main.sh
 ### Install dependencies
-Directory Structure
+Run install.sh or install dependencies/python libraries manualy in your environment. 
+
+### Directory Structure
 ~~~
 |-- data
 |-- eval
