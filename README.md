@@ -96,8 +96,8 @@ Datasets need to follow below directory structure to work
 
 ~~~
 ### Running code 
-*Activate your conda environment "conda activate <your environment name".
-*Make sure that all dependencies mentioned in install.sh are installed. if Running first time you my run install.sh to ensure all dependencies are installed.
+* Activate your conda environment "conda activate <your environment name".
+* Make sure that all dependencies mentioned in install.sh are installed. if Running first time you my run install.sh to ensure all dependencies are installed.
  
 ~~~
 
