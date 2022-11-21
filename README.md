@@ -96,8 +96,23 @@ Datasets need to follow below directory structure to work
 
 ~~~
 ### Running code 
+*Activate your conda environment "conda activate <your environment name".
+*Make sure that all dependencies mentioned in install.sh are installed. if Running first time you my run install.sh to ensure all dependencies are installed.
+ 
 ~~~
 
+
+######################################### PANNUKE DATA SET ###########################################################################
+
+#training Unet on PanNuke dataset
+python3 main.py -a train -n unet -d pannuke -lr .00005 -batch_size 30 -epoch 400  -w unet_pannuke_256x256_v1.0.wth  --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
+
+#Evalualting  Unet on PanNuke dataset 
+python3 main.py -a eval -d pannuke  -n unet  -w unet_pannuke_256x256_v1.0.wth  --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
+
+
+#training doubleunet on PanNuke Dataset
+python3 main.py -a train -n doubleunet  -d pannuke -lr .00005 -batch_size 30 -epoch 400  -w doublenet_pannuke_256x256_V1.0.wth --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
 #Evalualting double unet 
 python3 main.py -a eval -d pannuke  -n doubleunet -w doublenet_pannuke_256x256_V1.0.wth --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
 
