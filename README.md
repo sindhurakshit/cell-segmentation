@@ -95,3 +95,56 @@ Datasets need to follow below directory structure to work
 |   `-- inflate.py
 
 ~~~
+### Running code 
+~~~
+
+#Evalualting double unet 
+python3 main.py -a eval -d pannuke  -n doubleunet -w doublenet_pannuke_256x256_V1.0.wth --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
+
+#Training swinunet on Panuke data set
+python3 main.py -a train -n swinunet -d pannuke -lr .00005 -batch_size 30 -epoch 400  -w swinunet_pannuke_224x224_V1.0.wth --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
+
+#Evalualting swin unet on PanNuke dataset 
+python3 main.py -a eval -n swinunet  -d pannuke  -w swinunet_pannuke_224x224_V1.0.wth --source_folder /data/home/ec211268/kumar/project/data/PanNuke/folds
+
+
+######################################### BART DATA SET ###########################################################################
+#training Unet on bart dataset
+python3 main.py -a train -n unet -d bart -lr .00005 -batch_size 20 -epoch 400  -w unet_bart_256x256_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/bart
+
+#Evalualting  Unet on bart dataset 
+python3 main.py -a eval -d bart  -n unet  -w unet_bart_256x256_v1.0.wth  --source_folder /data/home/ec211268/kumar/project/data/bart
+
+
+#training doubleunet on bart Dataset
+python3 main.py -a train -n doubleunet  -d bart -lr .00005 -batch_size 20  -epoch 400  -w doublenet_bart_256x256_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/bart
+
+#Evalualting double unet 
+python3 main.py -a eval -d bart  -n doubleunet -w doublenet_bart_256x256_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/bart
+
+#Training swinunet on bart  data set
+python3 main.py -a train -n swinunet -d bart -lr .00005 -batch_size 20 -epoch 400  -w swinunet_bart_224x224_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/bart
+
+#Evalualting swin unet on bart  dataset 
+python3 main.py -a eval -n swinunet  -d bart  -w swinunet_bart_224x224_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/bart
+
+
+######################################### GlaS DATA SET ###########################################################################
+
+#training Unet on PanNuke dataset
+python3 main.py -a train -n unet -d glas -lr .005 -batch_size 20 -epoch 400  -w unet_glas_256x256_v1.0.wth  --source_folder /data/home/ec211268/kumar/project/data/GlaS
+
+#Evalualting  Unet on PanNuke dataset 
+python3 main.py -a eval -d glas  -n unet  -w unet_glas_256x256_v1.0.wth  --source_folder /data/home/ec211268/kumar/project/data/GlaS
+
+
+#training doubleunet on PanNuke Dataset
+python3 main.py -a train -n doubleunet  -d glas -lr .00005 -batch_size 20  -epoch 400  -w doublenet_glas_256x256_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/GlaS
+
+#Evalualting double unet 
+python3 main.py -a eval -d glas  -n doubleunet -w doublenet_glas_256x256_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/GlaS
+
+#Training swinunet on Panuke data set
+python3 main.py -a train -n swinunet -d glas -lr .00005 -batch_size 20 -epoch 400  -w swinunet_glas_224x224_v1.0.wth --source_folder /data/home/ec211268/kumar/project/data/GlaS
+
+~~~
